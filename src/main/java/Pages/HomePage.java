@@ -30,6 +30,12 @@ public class HomePage {
 	
 	@FindBy(css="div[role='listitem']")
 	List<WebElement> productList;
+	
+	@FindBy(css="#add-to-cart-button")
+	WebElement addToCartBtn;
+	
+	@FindBy(css="#nav-cart")
+	WebElement cartBtn;
 
 	
 	
@@ -53,6 +59,8 @@ public class HomePage {
 		String productCheck=productEle.findElement(By.cssSelector("h2[class*='a-size-base-plus'] span")).getText();
 		System.out.println(productCheck);
 		spt.click();
+		addToCartBtn.click();	
+		cartBtn.click();
 		
 		
 		
